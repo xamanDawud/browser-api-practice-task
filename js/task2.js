@@ -40,3 +40,16 @@ document
   .addEventListener("click", function () {
     deleteElement("Message");
   });
+
+document.getElementById("reset-btn").addEventListener("click", function () {
+  localStorage.clear();
+});
+
+document.getElementById("submit-btn").addEventListener("click", function () {
+  let InputField = getElementById("name-input");
+  localStorage.setItem("Name", InputField.value);
+  let InputFieldd = getElementById("email-input");
+  localStorage.setItem("Email", InputFieldd.value);
+  let InputFielddd = getElementById("message-input");
+  localStorage.setItem("Message", InputFielddd.value);
+});
